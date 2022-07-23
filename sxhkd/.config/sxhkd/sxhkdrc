@@ -1,0 +1,19 @@
+
+# make screenshot
+super + f
+ shotrect
+
+super + l
+ sudo /home/hcnt/bin/freeze
+
+super + Up
+ sudo /home/hcnt/bin/brighter >> /dev/null
+
+super + Down
+ sudo /home/hcnt/bin/dimmer >> /dev/null
+
+XF86AudioLowerVolume
+ amixer sset Master 5%- >> /dev/null
+
+XF86AudioRaiseVolume
+ amixer sset Master 5%+ >> /dev/null
