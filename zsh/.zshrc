@@ -26,7 +26,12 @@ bindkey "^[[1;5D" backward-word
 export PATH="$PATH:~/.dotnet/tools"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
 export PATH="$PATH:~/bin"
+
 alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print }'"
+alias gs="git status"
+alias gp="git push"
+alias gadd="git add -A"
+
 
 bindkey -v
 
