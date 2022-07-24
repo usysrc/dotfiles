@@ -1,0 +1,48 @@
+! special
+*.foreground:   #cadedb
+*.background:   #000000
+*.cursorColor:  #cadedb
+
+URxvt.transparent:	true
+URxvt.shading:		20
+
+! black
+*.color0:       #090b0b
+*.color8:       #bb963e
+
+! red
+*.color1:       #141817
+*.color9:       #aed2f9
+
+! green
+*.color2:       #242929
+*.color10:      #80d8cf
+
+! yellow
+*.color3:       #3b4241
+*.color11:      #82dcd2
+
+! blue
+*.color4:       #586260
+*.color12:      #ecb6bf
+
+! magenta
+*.color5:       #7b8886
+*.color13:      #93c6f7
+
+! cyan
+*.color6:       #a3b4b2
+*.color14:      #7ac261
+
+! white
+*.color7:       #d2e7e4
+*.color15:      #59a4de
+
+URxvt*scrollBar:	false
+!URxvt.xftAntialias:     true
+!URxvt*font:             xft:SourceCodePro:pixelsize=12:antialias=true:hinting=true
+!URxvt*boldFont:         xft:SourceCodePro:pixelsize=12:antialias=true:hinting=true
+!URxvt*italicFont:       xft:SourceCodePro:pixelsize=12:antialias=true:hinting=true
+!URxvt*bolditalicFont:   xft:SourceCodePro:pixelsize=12:antialias=true:hinting=true
+
+
