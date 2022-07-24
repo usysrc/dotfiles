@@ -31,7 +31,8 @@ alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep per
 alias gs="git status"
 alias gp="git push"
 alias gadd="git add -A"
-
+alias gcm="git commit -m"
+alias gco="git checkout"
 
 bindkey -v
 
