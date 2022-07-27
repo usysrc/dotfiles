@@ -19,8 +19,11 @@ alias vim="nvim"
 alias cat=bat
 
 PROMPT='%T %B%~%b $ '
+
+
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 autoload -Uz compinit && compinit
+
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
 export PATH="$PATH:~/.dotnet/tools"
