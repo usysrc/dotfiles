@@ -26,9 +26,10 @@ autoload -Uz compinit && compinit
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
-export PATH="$PATH:~/.dotnet/tools"
 export DOTNET_CLI_TELEMETRY_OPTOUT=1
-export PATH="$PATH:~/bin"
+export PATH="$PATH:$HOME/bin"
+export GOPATH="$HOME/go"
+export PATH="$PATH:$GOPATH/bin"
 
 alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print }'"
 alias gs="git status"
