@@ -26,4 +26,4 @@ vim.call('plug#end')
 vim.keymap.set('n', '<c-p>',"<Cmd>Telescope find_files<CR>")
 vim.keymap.set({'n', 'i'}, '<c-s>',"<Cmd>w<CR>")
 vim.keymap.set({'n', 'i'}, '<c-q>',"<Cmd>q<CR>")
-
+vim.keymap.set({'n', 'i'}, '<c-r>',"<Cmd>!love .<CR>")
