@@ -38,6 +38,8 @@ alias gadd="git add -A"
 alias gcm="git commit -m"
 alias gco="git checkout"
 
-bindkey -v
+#bindkey -v
+set -o vi
+bindkey "^R" history-incremental-search-backward
 
 nitch
