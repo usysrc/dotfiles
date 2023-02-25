@@ -2,7 +2,9 @@
 
 ## Install stow on Arch
 
-```sudo pacman -S stow```
+```
+sudo pacman -S stow
+```
 
 ## Clone into `~/`
 You should clone it to your HOME folder because it is easier to use with.
@@ -11,10 +13,11 @@ You should clone it to your HOME folder because it is easier to use with.
 git clone https://github.com/usysrc/dotfiles
 ```
 
-
 ## Install all dotfiles
 
-```stow */```
+```
+stow */
+```
 
 ## Add changes to dotfiles
 Since stow changes are 
