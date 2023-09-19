@@ -5,7 +5,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
-HISTFILE="/home/hcnt/.zsh/.histfile"
+HISTFILE=".zsh/.histfile"
 HISTSIZE=100000
 SAVEHIST=100000
 setopt appendhistory
@@ -39,7 +39,21 @@ alias gcm="git commit -m"
 alias gco="git checkout"
 
 #bindkey -v
-set -o vi
+#set -o vi
 bindkey "^R" history-incremental-search-backward
 
-nitch
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# bun completions
+[ -s "/Users/tilmannhars/.bun/_bun" ] && source "/Users/tilmannhars/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
