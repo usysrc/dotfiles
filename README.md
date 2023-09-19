@@ -6,6 +6,12 @@
 sudo pacman -S stow
 ```
 
+## Install stow on MacOS
+
+```
+brew install stow
+```
+
 ## Clone into `~/`
 You should clone it to your HOME folder because it is easier to use with.
 
