@@ -36,6 +36,8 @@ alias gp="git push"
 alias gadd="git add -A"
 alias gcm="git commit -m"
 alias gco="git checkout"
+alias gd="git diff"
+alias gds="git diff --staged"
 
 # arch specific
 alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print }'"
