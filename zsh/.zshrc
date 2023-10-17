@@ -64,3 +64,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # starship prompt
 eval "$(starship init zsh)"
+
+# docker
+export PATH="$HOME/.docker/bin:$PATH"
+
+# import certs
+export NODE_EXTRA_CA_CERTS="${HOME}/certs/chain.crt"
