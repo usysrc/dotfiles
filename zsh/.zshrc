@@ -42,8 +42,8 @@ alias gds="git diff --staged"
 # arch specific
 alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep percentage | awk '{print }'"
 
-#bindkey -v
-#set -o vi
+bindkey -v
+set -o vi
 bindkey "^R" history-incremental-search-backward
 
 
@@ -58,6 +58,8 @@ export NVM_DIR="$HOME/.nvm"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
+# z
+ . /opt/homebrew/etc/profile.d/z.sh
+
+# starship prompt
+eval "$(starship init zsh)"
