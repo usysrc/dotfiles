@@ -36,5 +36,8 @@ config.macos_window_background_blur = 100
 -- Create the Font
 config.font = wezterm.font("Hack Nerd Font")
 
+-- Disable audible bell
+config.audible_bell = "Disabled"
+
 -- and finally, return the configuration to wezterm
 return config
