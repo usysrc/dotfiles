@@ -32,6 +32,7 @@ alias vim="nvim"
 alias v="nvim"
 alias cat=bat
 alias gs="git status"
+alias gpl="git pull"
 alias gp="git push"
 alias gadd="git add -A"
 alias gcm="git commit -m"
