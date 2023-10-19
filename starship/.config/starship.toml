@@ -1,0 +1,5 @@
+# ~/.config/starship.toml
+
+# disable docker_context
+[docker_context]
+format = ''
