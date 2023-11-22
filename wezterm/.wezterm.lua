@@ -34,7 +34,10 @@ config.window_background_opacity = 0.9
 config.macos_window_background_blur = 100
 
 -- Create the Font
-config.font = wezterm.font("Hack Nerd Font")
+-- config.font = wezterm.font("Hack Nerd Font")
+-- config.font = wezterm.font("GohuFont 11 Nerd Font")
+-- config.font = wezterm.font("VictorMono Nerd Font")
+config.font = wezterm.font("JetBrainsMono Nerd Font")
 
 -- Disable audible bell
 config.audible_bell = "Disabled"
