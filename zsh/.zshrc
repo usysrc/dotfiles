@@ -47,10 +47,11 @@ bindkey -v
 set -o vi
 bindkey "^R" history-incremental-search-backward
 
-
+# configure nvim
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export EDITOR="nvim"
 
 # bun completions
 [ -s "/Users/tilmannhars/.bun/_bun" ] && source "/Users/tilmannhars/.bun/_bun"
@@ -60,7 +61,7 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # z
- . /opt/homebrew/etc/profile.d/z.sh
+eval "$(zoxide init zsh)"
 
 # starship prompt
 eval "$(starship init zsh)"
@@ -70,3 +71,9 @@ export PATH="$HOME/.docker/bin:$PATH"
 
 # import certs
 export NODE_EXTRA_CA_CERTS="${HOME}/certs/chain.crt"
+
+# add autosuggestionst
+source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# add rust bin to PATH
+export PATH="$HOME/.cargo/bin:$PATH"
