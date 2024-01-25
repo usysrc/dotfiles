@@ -5,6 +5,9 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# Uncomment to load profiler
+# zmodload zsh/zprof
+
 HISTFILE=".zsh/.histfile"
 HISTSIZE=100000
 SAVEHIST=100000
@@ -15,7 +18,12 @@ setopt SHARE_HISTORY
 PROMPT='%T %B%~%b $ '
 
 zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
-autoload -Uz compinit && compinit
+
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
 
 bindkey "^[[1;5C" forward-word
 bindkey "^[[1;5D" backward-word
@@ -47,10 +55,18 @@ bindkey -v
 set -o vi
 bindkey "^R" history-incremental-search-backward
 
-# configure nvim
+# configure nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+nvm() {
+  echo "🚨 NVM not loaded! Loading now..."
+  unset -f nvm
+  export NVM_PREFIX=$(brew --prefix nvm)
+  [ -s "$NVM_PREFIX/nvm.sh" ] && . "$NVM_PREFIX/nvm.sh"
+  nvm "$@"
+}
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# configure nvim
 export EDITOR="nvim"
 
 # bun completions
@@ -77,3 +93,6 @@ source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # add rust bin to PATH
 export PATH="$HOME/.cargo/bin:$PATH"
+
+# uncomment to profile .zshrc
+# zprof
