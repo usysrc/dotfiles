@@ -96,3 +96,5 @@ export PATH="$HOME/.cargo/bin:$PATH"
 
 # uncomment to profile .zshrc
 # zprof
+export PATH=/usr/local/anaconda3/bin:$PATH
+export PATH=/opt/homebrew/anaconda3/bin:$PATH
