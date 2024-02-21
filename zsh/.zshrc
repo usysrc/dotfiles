@@ -8,9 +8,9 @@
 # Uncomment to load profiler
 # zmodload zsh/zprof
 
-HISTFILE=".zsh/.histfile"
-HISTSIZE=100000
-SAVEHIST=100000
+export HISTFILE="$HOME/.zsh/.histfile"
+export HISTSIZE=100000
+export SAVEHIST=100000
 setopt appendhistory
 setopt INC_APPEND_HISTORY  
 setopt SHARE_HISTORY
@@ -86,8 +86,9 @@ eval "$(starship init zsh)"
 export PATH="$HOME/.docker/bin:$PATH"
 
 # import certs
-export NODE_EXTRA_CA_CERTS="${HOME}/certs/chain.crt"
-
+if test -f "${HOME}/certs/chain.crt"; then
+  export NODE_EXTRA_CA_CERTS="${HOME}/certs/chain.crt"
+fi
 # add autosuggestionst
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
