@@ -56,14 +56,18 @@ set -o vi
 bindkey "^R" history-incremental-search-backward
 
 # configure nvm
-export NVM_DIR="$HOME/.nvm"
-nvm() {
-  echo "🚨 NVM not loaded! Loading now..."
-  unset -f nvm
-  export NVM_PREFIX=$(brew --prefix nvm)
-  [ -s "$NVM_PREFIX/nvm.sh" ] && . "$NVM_PREFIX/nvm.sh"
-  nvm "$@"
-}
+if command -v brew
+then
+	export NVM_DIR="$HOME/.nvm"
+	nvm() {
+  	echo "🚨 NVM not loaded! Loading now..."
+  	unset -f nvm
+  	export NVM_PREFIX=$(brew --prefix nvm)
+  	[ -s "$NVM_PREFIX/nvm.sh" ] && . "$NVM_PREFIX/nvm.sh"
+  	nvm "$@"
+	}
+fi
+
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # configure nvim
@@ -90,7 +94,10 @@ if test -f "${HOME}/certs/chain.crt"; then
   export NODE_EXTRA_CA_CERTS="${HOME}/certs/chain.crt"
 fi
 # add autosuggestionst
-source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+if command -v brew
+then
+	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+fi
 
 # add rust bin to PATH
 export PATH="$HOME/.cargo/bin:$PATH"
