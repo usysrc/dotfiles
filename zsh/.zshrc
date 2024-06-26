@@ -84,7 +84,10 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 eval "$(zoxide init zsh)"
 
 # starship prompt
-eval "$(starship init zsh)"
+type starship_zle-keymap-select >/dev/null || \
+{
+	eval "$(starship init zsh)"
+}
 
 # docker
 export PATH="$HOME/.docker/bin:$PATH"
