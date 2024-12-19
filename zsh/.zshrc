@@ -33,6 +33,8 @@ export PATH="$PATH:$HOME/bin"
 export GOPATH="$HOME/go"
 export PATH="$PATH:$GOPATH/bin"
 
+alias ghrvw="gh repo view --web"
+alias grep='grep --color'
 alias ls='ls --color=auto'
 alias ll='ls -lah'
 alias dc='docker-compose'
@@ -53,10 +55,12 @@ alias battery="upower -i /org/freedesktop/UPower/devices/battery_BAT0 | grep per
 
 bindkey -v
 set -o vi
-bindkey "^R" history-incremental-search-backward
+#bindkey "^R" history-incremental-search-backward
+
+source <(fzf --zsh)
 
 # configure nvm
-if command -v brew
+if command -v brew > /dev/null
 then
 	export NVM_DIR="$HOME/.nvm"
 	nvm() {
@@ -97,7 +101,7 @@ if test -f "${HOME}/certs/chain.crt"; then
   export NODE_EXTRA_CA_CERTS="${HOME}/certs/chain.crt"
 fi
 # add autosuggestionst
-if command -v brew
+if command -v brew > /dev/null
 then
 	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi
