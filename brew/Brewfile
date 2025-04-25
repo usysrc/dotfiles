@@ -15,6 +15,7 @@ brew "golangci-lint"
 brew "httpie"
 brew "jq"
 brew "luarocks"
+brew "mas"
 brew "neovim"
 brew "pandoc"
 brew "starship"
@@ -120,6 +121,11 @@ cask "signal"
 cask "tiled"
 cask "visual-studio-code"
 cask "vlc"
+mas "Affinity Designer", id: 824171161
+mas "DaVinci Resolve", id: 571213070
+mas "Instapaper", id: 288545208
+mas "Pasteboard Viewer", id: 1499215709
+mas "WhatsApp", id: 310633997
 vscode "alexcvzz.vscode-sqlite"
 vscode "ancientlord.nightowl-theme"
 vscode "bierner.markdown-mermaid"
